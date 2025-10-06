@@ -1,0 +1,614 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: "Newsreader", serif;
+
+}
+
+/*Header*/
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+/*posicion y tamano del logo*/
+
+header .logo img {
+  width: 15vw;
+  height: 15vh;
+  margin: 0 40px;
+}
+
+/* navegador ocupa el 100% */
+nav {
+  display: flex;
+  width: 100%;
+  height: 15vh;
+  justify-content: space-between;
+  align-items: center;
+
+}
+/* navegador en linea*/
+.navbar {
+  display: inline-flex;
+  gap: 25px;
+
+}
+/*diseno del navegador*/
+.navbar a {
+  display: flex;
+  text-align: center;
+  margin: 0 50px 0 0;
+  color: #405533f5;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-bottom: 2px solid transparent;
+  transition: transform 0.3s ease;
+}
+
+/*transicion del navegador*/
+.navbar a:hover {
+  transform: scale(1.1);
+}
+
+
+/* titulo principal*/
+.titel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #324129f5;
+  padding: 10px;
+}
+
+.titel-subtitulo {
+  background: transparent;
+}
+
+.titel-subtitulo h1 {
+  font-size: 80px;
+  color: #f6f9f54d;
+  padding: 20px;
+  text-shadow: 10px 10px 10px rgba(12, 17, 6, 0.666);
+
+}
+
+.titel-subtitulo h2 {
+  color: rgba(255, 255, 255, 0.719);
+  font-size: 22px;
+  margin: 10px;
+  letter-spacing: 2px;
+}
+
+.titel-subtitulo p {
+  color: #e4e5e2d8;
+  font-size: 30px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.titel-contenido {
+  align-items: center;
+  width: 60vw;
+  max-width: 1200px;
+  font-size: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 14px rgba(223, 213, 213, 0.428);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.098);
+  margin: 0 0 20px 0;
+  
+}
+/* aumento degradado del texto*/
+@keyframes revealText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform:translateY(0);
+  }
+}
+/*aparicion del texto de 0.9s*/
+
+.titel-contenido p {
+  color: white;
+  text-align: justify;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: revealText 0.9s ease forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+body {
+  background-color: rgba(246, 238, 238, 0.474);
+  margin: auto;
+}
+
+.encabezado {
+  display: flex;
+
+  text-align: center;
+}
+
+.logo {
+  margin-left: auto;
+
+}
+
+.logo img {
+  width: 20vw;
+}
+
+Responsive Sideboard Home 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #060505fa;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #c6c3c3;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #a8d415ec;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+span {
+  display: flex;
+  margin-right: auto;
+  margin-top: -90px;
+  padding: 5px;
+}
+
+
+.titulo {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-size: 150px;
+  margin: 20px;
+  animation-name: mover-titulo;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes mover-titulo {
+  from {
+    transform: translateX(0);
+  
+  }
+
+  to {
+    transform: translateX(100px);
+   
+  }
+}
+
+#container {
+  display: flex;
+  margin: 100px;
+  gap: 5px;
+
+}
+
+.home {
+
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+
+}
+
+.home-image {
+  text-align: start;
+  font-size: 150px;
+  background-color: white;
+  width: 50vw;
+  padding-left: 10px;
+}
+
+
+.home-text {
+
+  background-color: #d8ff57;
+  padding: 20px;
+  width: 50vw;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 20px;
+}
+
+.home-image img {
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+.sub {
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*
+.home:hover {
+  transform: scale(1.02);
+}
+
+
+
+
+.noticia img:hover {
+  transform: scale(1.1);
+}
+
+.masinfo {
+  background-color: #080708;
+  /* Color de fondo */
+/*color: rgb(246, 248, 248);
+  /* Color del texto */
+/*padding: 10px 20px;
+  /* Espaciado interno */
+/*text-align: center;
+  /* Centrado del texto */
+/*text-decoration: none;
+  /* Sin subrayado */
+/*display: inline-block;
+  /* Para que se comporte como un bloque */
+/*font-size: 16px;
+  cursor: pointer;
+  /* Cambia el cursor al pasar el ratón */
+
+/*}
+
+/*Nosotros - mas sobre UX/UI */
+
+
+/* .startup{
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 50px;
+}*/
+/*
+.contenedor-ux {
+  border: 1px solid rgba(0, 0, 0, 0.172);
+  background-color: white;
+  padding: 40px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 95vw;
+  font-size: 20px;
+  box-shadow: 12px 12px 2px 1px rgba(38, 38, 38, 0.18);
+  background: linear-gradient(135deg, #FFEEAD, #FF7E5F);
+}
+
+.costumer-img {
+  float: left;
+  /* Flota la imagen a la izquierda */
+/*margin-right: 15px;
+
+
+}
+
+
+
+
+/*.contenedor-imagen p {
+  margin: 0;
+  /* Elimina el margen por defecto del párrafo */
+/*text-align: justify;
+  letter-spacing: 0.5px;
+  font-size: 25px;
+ }
+
+.imagen-bandera {
+  float: left;
+
+  margin-right: 15px;
+
+  max-width: 35vw;
+
+  padding: 10px;
+
+}
+*/
+
+/*login container*/
+
+
+/*.contenedor-formulario {
+
+  display: flex;
+  /* Convierte el div en un contenedor flexible */
+/*justify-content: center;
+  /* Centra horizontalmente */
+/*align-items: center;
+  /* Centra verticalmente */
+/*min-height: 100vh;
+}
+
+form {
+
+  border: 3px solid #f1f1f1;
+  width: 50vw;
+  margin: 10px;
+  border: 1px solid rgb(179, 177, 177);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+}
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #8bf30dbd;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #080808;
+}
+
+.img-container {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container-login {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 15px;
+  gap: 3px;
+}
+
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+/*Formulario para suscribirse*/
+
+
+/*
+form.suscribirte {
+  height: auto;
+  padding: 4vw;
+  border: 1px solid rgba(0, 0, 0, 0.29);
+  border-radius: 1em;
+  margin: auto;
+  width: 50vw;
+  margin-top: 4vh;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+form li+li {
+  margin-top: 2em;
+}
+
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dddada;
+  display: inline-table;
+  border-radius: 4px;
+}
+
+.button {
+
+  color: rgb(229, 229, 240);
+  cursor: pointer;
+  border-radius: 9px;
+  text-align: center;
+
+}
+
+/*contacto-mapa*/
+
+/*
+.mapa {
+
+  text-align: center;
+  margin: 20px 0;
+
+
+}
+
+.mapa iframe {
+
+  width: 50vw;
+  height: 50vh;
+  border-radius: 10px;
+
+
+}
+
+address {
+
+  background-color: #ded9d9;
+  margin: auto;
+  margin-top: 45px;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  color: rgb(14, 13, 13)
+}
+
+footer {
+  background-color: #020202f6;
+  padding: 25px;
+  text-align: center;
+  color: white;
+  margin: auto;
+  font-size: 25px;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+/*@media (max-width: 600px) {
+
+  nav,
+  article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*texto en Movimiento*/
+/*
+.box-container {
+  height: auto;
+  width: auto;
+  font-size: 100px;
+  position: relative;
+  /* Posición relativa para que el texto se mueva en relación a este */
+/*overflow: hidden;
+  /* Oculta lo que se salga del contenedor */
+/*animation-name: slideAndStop;
+  /* Nombre de la animación */
+/*animation-duration: 5s;
+  /* Duración total de la animación */
+/*animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+
+}
+
+
+@keyframes slideAndStop {
+  0% {
+    left: -100%;
+    /* Empieza fuera de la pantalla por la izquierda */
+
+/*  }
+
+  50% {
+    left: 0;
+    /* Se mueve hasta el inicio */
+/* opacity: 1;
+  }
+
+}
+
+.moving {
+  color: rgb(11, 10, 10);
+  /* Color del texto */
+/*position: relative;
+  /* Posición relativa al flujo para poder usar 'left' */
+/* Mantiene el estado final del texto */
+/*}
